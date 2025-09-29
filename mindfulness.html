@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GreenBite - Mindfulness</title>
+  <link rel="stylesheet" href="./Style.css">
+  <script src="./mindfulnes.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>GreenBite</h1>
+    <img src="./Images/Logo.gif" alt="GreenBite Logo">
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./recipes.html">Recipes</a>
+      <a href="./calculator.html">Calorie Calculator</a>
+      <a href="./workout.html">Workouts</a>
+      <a href="./mindfulness.html">Mindfulness</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <h2>Mindfulness Timer</h2>
+    <p>Set a duration for your meditation session and press Start.</p>
+
+    <label for="meditationDuration">Duration (minutes):</label>
+    <input type="number" id="meditationDuration" min="1" max="120" value="5">
+
+    <button id="startMeditation">Start Meditation</button>
+
+    <div class="timer-container">
+      <svg id="progressCircle" width="150" height="150">
+        <circle cx="75" cy="75" r="70" stroke="#eee" stroke-width="10" fill="none"/>
+        <circle id="progressBar" cx="75" cy="75" r="70" stroke="#2a7a2a" stroke-width="10" fill="none"
+                stroke-linecap="round" stroke-dasharray="439.82" stroke-dashoffset="0" transform="rotate(-90 75 75)"/>
+      </svg>
+      <div id="meditationBox" class="timer-text">00:00</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GreenBite. All rights reserved.</p>
+  </footer>
+</body>
+</html>

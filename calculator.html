@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GreenBite - Calorie Calculator</title>
+  <link rel="stylesheet" href="./Style.css">
+  <script src="./calculator.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>GreenBite</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="workout.html">Workout</a>
+      <a href="mindfulness.html">Mindfulness</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="calculator">
+      <h2>Calorie & Nutrition Calculator</h2>
+  
+      <form id="calc-form">
+        <label>Age: <input type="number" id="age" required></label>
+        <label>Gender:
+          <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </label>
+        <label>Height (cm): <input type="number" id="height" required></label>
+        <label>Weight (kg): <input type="number" id="weight" required></label>
+        <label>Activity Level:
+          <select id="activity">
+            <option value="1.2">Sedentary</option>
+            <option value="1.375">Lightly active</option>
+            <option value="1.55">Moderately active</option>
+            <option value="1.725">Very active</option>
+            <option value="1.9">Super active</option>
+          </select>
+        </label>
+        <label>Goal:
+          <select id="goal">
+            <option value="maintain">Maintain</option>
+            <option value="lose">Lose Weight</option>
+            <option value="gain">Gain Muscle</option>
+          </select>
+        </label>
+        <button type="submit">Calculate</button>
+      </form>
+  
+      <div id="results" class="hidden">
+        <h3>Results</h3>
+        <p><strong>BMR:</strong> <span id="bmr"></span> kcal</p>
+        <p><strong>TDEE:</strong> <span id="tdee"></span> kcal</p>
+  
+        <h4>Macros</h4>
+        <div class="progress-bar">
+          <span>Protein</span>
+          <div><div id="protein-bar"></div></div>
+          <span id="protein-text"></span>
+        </div>
+  
+        <div class="progress-bar">
+          <span>Carbs</span>
+          <div><div id="carbs-bar"></div></div>
+          <span id="carbs-text"></span>
+        </div>
+  
+        <div class="progress-bar">
+          <span>Fat</span>
+          <div><div id="fat-bar"></div></div>
+          <span id="fat-text"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 GreenBite. All rights reserved.</p>
+  </footer>
+  
+  </body>
+  </html>
